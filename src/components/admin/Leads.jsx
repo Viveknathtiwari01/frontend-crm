@@ -772,7 +772,7 @@ const Leads = () => {
   useEffect(() => {
     const fetchLeads = async () => {
       try {
-        const response = await axios.get("${import.meta.env.VITE_BACKEND_URL}/api/leads/");
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/leads/`);
         setLeads(response.data.reverse());
       } catch (error) {
         console.error("Failed to fetch leads");
